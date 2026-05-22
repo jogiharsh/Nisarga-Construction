@@ -1,49 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="NISARGA CONSTRUCTIONS offers architectural design, structural design, approvals support, vastu consultancy, execution, and interior design services in India." />
-  <title>NISARGA CONSTRUCTIONS | Design, Approvals & Execution</title>
-
-  <style>
+  <title>NISARGA CONSTRUCTIONS | Premium Design, Approvals & Execution</title>  <style>
     :root {
-      --bg: #f6efe6;
-      --bg-2: #fff8ef;
-      --surface: rgba(255,255,255,.66);
-      --surface-strong: rgba(255,255,255,.9);
-      --text: #142127;
-      --muted: #647178;
-      --dark: #17262d;
-      --dark-2: #253f49;
-      --accent: #ef7d38;
-      --accent-2: #ffb15f;
-      --accent-deep: #c95c1a;
-      --green: #1c8f83;
-      --line: rgba(20,33,39,.11);
-      --white-line: rgba(255,255,255,.55);
-      --shadow: 0 26px 70px rgba(45,34,20,.14);
-      --shadow-soft: 0 18px 48px rgba(45,34,20,.09);
-      --radius-xl: 34px;
-      --radius-lg: 24px;
-      --radius-md: 16px;
-      --max: 1180px;
+      --bg: #050507;
+      --bg-2: #0a0b0f;
+      --panel: rgba(255, 255, 255, .065);
+      --panel-strong: rgba(255, 255, 255, .105);
+      --panel-soft: rgba(255, 255, 255, .04);
+      --text: #f7f1e7;
+      --muted: rgba(247, 241, 231, .66);
+      --faint: rgba(247, 241, 231, .42);
+      --gold: #d6b46a;
+      --gold-2: #ffe3a0;
+      --gold-3: #9b7332;
+      --copper: #c9773e;
+      --emerald: #1f9d86;
+      --line: rgba(255, 255, 255, .12);
+      --line-strong: rgba(255, 227, 160, .26);
+      --shadow: 0 38px 120px rgba(0, 0, 0, .45);
+      --shadow-gold: 0 24px 70px rgba(214, 180, 106, .16);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --max: 1200px;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
 
     body {
       margin: 0;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at 8% 8%, rgba(239,125,56,.20), transparent 28%),
-        radial-gradient(circle at 85% 12%, rgba(28,143,131,.16), transparent 26%),
-        linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 48%, #f7efe3 100%);
-      line-height: 1.6;
+        radial-gradient(circle at 20% 0%, rgba(214, 180, 106, .16), transparent 32%),
+        radial-gradient(circle at 82% 12%, rgba(31, 157, 134, .12), transparent 30%),
+        radial-gradient(circle at 50% 92%, rgba(201, 119, 62, .12), transparent 34%),
+        linear-gradient(180deg, #050507 0%, #090a0d 42%, #050507 100%);
       overflow-x: hidden;
+      line-height: 1.6;
+      min-height: 100vh;
     }
 
     body::before {
@@ -51,18 +54,1392 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
-      z-index: -3;
+      z-index: -5;
       background-image:
-        linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px);
-      background-size: 44px 44px;
-      mask-image: linear-gradient(180deg, rgba(0,0,0,.7), transparent 85%);
+        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,.82), transparent 88%);
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      pointer-events: none;
+      opacity: .13;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.75'/%3E%3C/svg%3E");
     }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    ::selection {
+      background: rgba(214, 180, 106, .35);
+      color: var(--text);
+    }
+
+    .page-shell {
+      width: min(calc(100% - 34px), var(--max));
+      margin: 0 auto;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      width: 0%;
+      height: 3px;
+      z-index: 10000;
+      background: linear-gradient(90deg, transparent, var(--gold), var(--gold-2));
+      box-shadow: 0 0 28px rgba(214, 180, 106, .55);
+    }
+
+    .luxury-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 227, 160, .85);
+      pointer-events: none;
+      z-index: 10002;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: width .22s ease, height .22s ease, opacity .2s ease, border-color .22s ease, background .22s ease;
+      mix-blend-mode: difference;
+    }
+
+    .luxury-cursor-dot {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      pointer-events: none;
+      z-index: 10003;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity .2s ease, transform .14s ease;
+      box-shadow: 0 0 18px rgba(255, 227, 160, .9);
+    }
+
+    .luxury-cursor.hovering {
+      width: 58px;
+      height: 58px;
+      background: rgba(255, 227, 160, .12);
+      border-color: rgba(255, 227, 160, .95);
+    }
+
+    .luxury-cursor.active { width: 46px; height: 46px; }
+
+    .cursor-glow {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -2;
+      opacity: .72;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(214, 180, 106, .11), transparent 68%);
+      filter: blur(3px);
+    }
+
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(88px);
+      opacity: .25;
+      pointer-events: none;
+      z-index: -3;
+      animation: floatOrb 20s ease-in-out infinite;
+    }
+
+    .orb-1 { width: 500px; height: 500px; background: var(--gold); top: -180px; left: -160px; }
+    .orb-2 { width: 460px; height: 460px; background: var(--emerald); top: 25%; right: -190px; animation-delay: 5s; }
+    .orb-3 { width: 420px; height: 420px; background: var(--copper); left: 34%; bottom: -220px; animation-delay: 9s; }
+
+    @keyframes floatOrb {
+      0%, 100% { transform: translate3d(0,0,0) scale(1); }
+      50% { transform: translate3d(42px,-58px,0) scale(1.1); }
+    }
+
+    .svg-deco {
+      position: absolute;
+      pointer-events: none;
+      color: rgba(214, 180, 106, .22);
+    }
+
+    .svg-deco path, .svg-deco circle, .svg-deco rect {
+      stroke: currentColor;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 15px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 227, 160, .22);
+      color: rgba(255, 227, 160, .82);
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.035));
+      backdrop-filter: blur(22px);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: .76rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 18px 44px rgba(0,0,0,.22);
+    }
+
+    .pill::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-2);
+      box-shadow: 0 0 0 7px rgba(214, 180, 106, .13), 0 0 24px rgba(255, 227, 160, .8);
+    }
+
+    .glass {
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.035)),
+        rgba(255, 255, 255, .045);
+      border: 1px solid rgba(255, 255, 255, .12);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(28px);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      padding: 18px 0;
+      background: linear-gradient(180deg, rgba(5,5,7,.82), rgba(5,5,7,.38));
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      backdrop-filter: blur(24px);
+      transition: padding .35s ease, background .35s ease, box-shadow .35s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 0;
+      background: rgba(5,5,7,.78);
+      box-shadow: 0 22px 70px rgba(0,0,0,.35);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 250px;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      position: relative;
+      flex: 0 0 auto;
+      overflow: hidden;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.14), transparent),
+        linear-gradient(145deg, #141416, #2a2419 54%, #d6b46a 160%);
+      border: 1px solid rgba(255, 227, 160, .22);
+      box-shadow: 0 20px 42px rgba(0,0,0,.34), 0 0 30px rgba(214,180,106,.13);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      bottom: 10px;
+      width: 13px;
+      border-radius: 4px 4px 2px 2px;
+      background: linear-gradient(180deg, var(--gold-2), var(--gold));
+    }
+
+    .brand-mark::before { height: 28px; left: 12px; transform: skewY(-25deg); }
+    .brand-mark::after { height: 35px; right: 12px; transform: skewY(18deg); }
+
+    .brand-text strong,
+    .footer-brand strong {
+      display: block;
+      font-size: .98rem;
+      letter-spacing: .11em;
+      line-height: 1.2;
+    }
+
+    .brand-text span,
+    .footer-brand span {
+      display: block;
+      color: var(--faint);
+      font-size: .78rem;
+      letter-spacing: .03em;
+      margin-top: 3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: .91rem;
+    }
+
+    nav a {
+      position: relative;
+      transition: color .25s ease;
+    }
+
+    nav a:hover { color: var(--text); }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -8px;
+      width: 24px;
+      height: 1px;
+      background: var(--gold-2);
+      transform: translateX(-50%) scaleX(0);
+      transition: transform .25s ease;
+      box-shadow: 0 0 16px rgba(255, 227, 160, .8);
+    }
+
+    nav a:hover::after { transform: translateX(-50%) scaleX(1); }
+
+    .cta-link {
+      padding: 12px 18px;
+      border-radius: 999px;
+      color: #100f0c;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold), var(--gold-3));
+      box-shadow: var(--shadow-gold);
+    }
+
+    nav .cta-link::after { display: none; }
+
+    .mobile-toggle {
+      display: none;
+      border: 1px solid rgba(255,227,160,.22);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 11px 14px;
+      border-radius: 999px;
+    }
+
+    main { overflow: hidden; }
+    section { padding: 108px 0; position: relative; }
+
+    .hero { padding-top: 68px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius-xl);
+      padding: clamp(30px, 5vw, 58px);
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      isolation: isolate;
+    }
+
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: 1px;
+      border-radius: inherit;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,227,160,.14), transparent 25%),
+        linear-gradient(135deg, rgba(255,255,255,.08), transparent 45%);
+      z-index: -1;
+    }
+
+    .hero-deco-1 { right: -20px; top: 24px; width: 230px; height: 230px; }
+    .hero-deco-2 { left: 36px; bottom: 34px; width: 170px; height: 170px; opacity: .7; }
+
+    .eyebrow-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow-line::after {
+      content: "";
+      width: min(170px, 22vw);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255,227,160,.4), transparent);
+    }
+
+    .hero h1 {
+      margin: 0 0 24px;
+      max-width: 12ch;
+      font-size: clamp(3.15rem, 8.3vw, 7.7rem);
+      line-height: .86;
+      letter-spacing: -.085em;
+      font-weight: 850;
+    }
+
+    .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(34px) rotateX(60deg);
+      transform-origin: bottom;
+      animation: charRise .82s cubic-bezier(.18,.82,.2,1) forwards;
+      animation-delay: calc(var(--i) * 24ms + 120ms);
+    }
+
+    .word-space { display: inline-block; width: .24em; }
+
+    @keyframes charRise {
+      to { opacity: 1; transform: translateY(0) rotateX(0deg); }
+    }
+
+    .gold-text {
+      background: linear-gradient(115deg, #fff4cc 0%, #d6b46a 32%, #9b7332 62%, #ffe3a0 100%);
+      background-size: 260% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: goldSweep 6s linear infinite;
+      filter: drop-shadow(0 14px 34px rgba(214,180,106,.16));
+    }
+
+    @keyframes goldSweep { to { background-position: 260% center; } }
+
+    .hero p {
+      margin: 0;
+      max-width: 67ch;
+      color: var(--muted);
+      font-size: 1.07rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-weight: 850;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      will-change: transform;
+    }
+
+    .button::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,.4), transparent);
+      transform: translateX(-120%);
+      transition: transform .72s ease;
+    }
+
+    .button:hover::before { transform: translateX(120%); }
+    .button:hover { box-shadow: 0 26px 70px rgba(214, 180, 106, .17); }
+
+    .button-primary {
+      color: #110f0b;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold), var(--gold-3));
+      box-shadow: var(--shadow-gold);
+    }
+
+    .button-secondary {
+      color: var(--text);
+      border: 1px solid rgba(255,227,160,.22);
+      background: rgba(255,255,255,.055);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-meta {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 36px;
+    }
+
+    .hero-meta div {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.09);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    .hero-meta strong {
+      display: block;
+      color: var(--gold-2);
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .hero-meta span { color: var(--muted); font-size: .91rem; }
+
+    .hero-panel {
+      border-radius: var(--radius-xl);
+      padding: 20px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 18px;
+      min-height: 640px;
+    }
+
+    .panel-top,
+    .panel-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      color: var(--faint);
+      font-size: .86rem;
+    }
+
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+      border-radius: 30px;
+      background:
+        radial-gradient(circle at 26% 24%, rgba(255, 227, 160, .16), transparent 28%),
+        radial-gradient(circle at 78% 72%, rgba(31,157,134,.16), transparent 30%),
+        linear-gradient(145deg, #121316, #070708 56%, #1d1810);
+      border: 1px solid rgba(255,255,255,.11);
+      transform-style: preserve-3d;
+      transition: transform .18s ease;
+    }
+
+    .hero-visual svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: .82;
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 2;
+      padding: 16px;
+      border-radius: 18px;
+      width: 190px;
+      color: var(--text);
+      background: rgba(255,255,255,.075);
+      border: 1px solid rgba(255,255,255,.13);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 26px 70px rgba(0,0,0,.32);
+      animation: floatCard 7s ease-in-out infinite;
+    }
+
+    .floating-card strong {
+      display: block;
+      color: var(--gold-2);
+      line-height: 1.25;
+      margin-bottom: 6px;
+    }
+
+    .floating-card span { display: block; color: var(--muted); font-size: .86rem; }
+
+    .card-a { top: 26px; left: 24px; }
+    .card-b { right: 22px; top: 44%; animation-delay: 1.6s; }
+    .card-c { left: 28px; bottom: 28px; width: 215px; animation-delay: 2.5s; }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-13px); }
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2,
+    .contact-panel h2,
+    .team-intro h2 {
+      margin: 14px 0 0;
+      max-width: 760px;
+      font-size: clamp(2.15rem, 4.2vw, 4rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+    }
+
+    .section-heading p,
+    .contact-panel p,
+    .team-intro p {
+      margin: 0;
+      max-width: 58ch;
+      color: var(--muted);
+    }
+
+    .cards-grid,
+    .projects-grid,
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card,
+    .project-card,
+    .testimonial-card,
+    .team-card,
+    .process-card,
+    .contact-panel,
+    .aside-card,
+    .footer-panel {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.028));
+      border: 1px solid rgba(255,255,255,.105);
+      box-shadow: 0 28px 90px rgba(0,0,0,.28);
+      backdrop-filter: blur(26px);
+    }
+
+    .card::before,
+    .project-card::before,
+    .testimonial-card::before,
+    .team-card::before,
+    .process-card::before,
+    .contact-panel::before,
+    .aside-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at var(--mx, 50%) var(--my, 0%), rgba(255,227,160,.16), transparent 34%);
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    .card:hover::before,
+    .project-card:hover::before,
+    .testimonial-card:hover::before,
+    .team-card:hover::before,
+    .process-card:hover::before,
+    .contact-panel:hover::before,
+    .aside-card:hover::before { opacity: 1; }
+
+    .card,
+    .team-card,
+    .process-card { border-radius: var(--radius-lg); }
+
+    .card {
+      padding: 30px;
+      min-height: 252px;
+      transition: transform .42s cubic-bezier(.2,.8,.2,1), border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .card:hover,
+    .project-card:hover,
+    .testimonial-card:hover,
+    .team-card:hover,
+    .process-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255, 227, 160, .24);
+      box-shadow: 0 38px 105px rgba(0,0,0,.36), 0 0 50px rgba(214,180,106,.08);
+    }
+
+    .card-number,
+    .process-index {
+      display: inline-flex;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      color: #171105;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--gold-2), var(--gold));
+      box-shadow: 0 18px 40px rgba(214,180,106,.18);
+      margin-bottom: 22px;
+    }
+
+    .card h3,
+    .project-copy h3,
+    .testimonial-copy h3,
+    .team-card h3,
+    .process-card h3,
+    .aside-card h3 {
+      margin: 0 0 10px;
+      line-height: 1.2;
+      font-size: 1.18rem;
+    }
+
+    .card p,
+    .project-copy p,
+    .testimonial-copy p,
+    .team-card p,
+    .process-card p,
+    .aside-card p,
+    .aside-card li {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .highlight-banner {
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+      padding: 26px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background:
+        radial-gradient(circle at 88% 20%, rgba(255,227,160,.19), transparent 32%),
+        linear-gradient(135deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
+      border: 1px solid rgba(255,227,160,.18);
+      box-shadow: 0 34px 100px rgba(0,0,0,.32);
+    }
+
+    .highlight-banner strong { display: block; margin-bottom: 4px; color: var(--gold-2); font-size: 1.14rem; }
+    .highlight-banner p { margin: 0; color: var(--muted); }
+
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      padding: 16px 0;
+      border-block: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.028);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 26s linear infinite;
+    }
+
+    .marquee span {
+      padding: 0 28px;
+      color: rgba(255, 227, 160, .68);
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-size: .78rem;
+      white-space: nowrap;
+    }
+
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    .dark-band {
+      margin: 28px 0;
+      padding: 110px 0;
+      border-radius: 48px;
+      background:
+        radial-gradient(circle at 16% 16%, rgba(214,180,106,.13), transparent 29%),
+        radial-gradient(circle at 86% 44%, rgba(31,157,134,.11), transparent 30%),
+        linear-gradient(145deg, #09090b, #111217 58%, #090909);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 44px 120px rgba(0,0,0,.32);
+    }
+
+    .team-layout,
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .team-intro,
+    .team-card,
+    .process-card,
+    .contact-panel,
+    .aside-card { border-radius: var(--radius-lg); }
+
+    .team-intro,
+    .team-card,
+    .process-card { padding: 30px; }
+
+    .team-intro {
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 86% 10%, rgba(214,180,106,.13), transparent 30%),
+        linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+      border: 1px solid rgba(255,255,255,.105);
+      box-shadow: 0 28px 90px rgba(0,0,0,.28);
+      backdrop-filter: blur(26px);
+    }
+
+    .team-note {
+      margin-top: 24px;
+      padding: 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,227,160,.18);
+      background: rgba(255,227,160,.06);
+      color: rgba(255, 227, 160, .78);
+    }
+
+    .team-stack,
+    .process-stack,
+    .contact-aside {
+      display: grid;
+      gap: 18px;
+    }
+
+    .team-card strong,
+    .project-copy strong,
+    .testimonial-role {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--gold-2);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      font-size: .78rem;
+    }
+
+    .project-card,
+    .testimonial-card {
+      border-radius: var(--radius-lg);
+      transition: transform .42s cubic-bezier(.2,.8,.2,1), border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .project-image {
+      position: relative;
+      aspect-ratio: 16 / 11;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 28% 18%, rgba(255,227,160,.22), transparent 26%),
+        linear-gradient(145deg, #151517, #070708 65%, #241a0b);
+    }
+
+    .project-image svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transition: transform .7s ease;
+    }
+
+    .project-card:hover .project-image svg { transform: scale(1.08); }
+
+    .project-copy,
+    .testimonial-copy { padding: 25px; position: relative; z-index: 1; }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 16px;
+    }
+
+    .project-meta span {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(255,227,160,.08);
+      border: 1px solid rgba(255,227,160,.14);
+      color: rgba(255, 227, 160, .8);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    .testimonial-card::after {
+      content: "\201C";
+      position: absolute;
+      right: 20px;
+      top: -8px;
+      font-family: Georgia, serif;
+      font-size: 7rem;
+      color: rgba(255,227,160,.09);
+      line-height: 1;
+    }
+
+    .rating-stars {
+      color: var(--gold-2);
+      letter-spacing: .11em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px rgba(255,227,160,.32);
+    }
+
+    .testimonial-author { margin-top: 18px; }
+    .testimonial-author strong { display: block; }
+    .testimonial-author span { color: var(--faint); }
+
+    .review-link {
+      display: inline-flex;
+      margin-top: 18px;
+      color: var(--gold-2);
+      font-weight: 900;
+    }
+
+    .process-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: transform .42s cubic-bezier(.2,.8,.2,1), border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .process-index { flex: 0 0 auto; margin: 0; }
+
+    .contact-panel,
+    .aside-card { padding: 32px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .contact-item {
+      padding: 18px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.095);
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-2);
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      font-size: .76rem;
+    }
+
+    .contact-item span,
+    .contact-item a { color: var(--muted); }
+
+    .aside-card ul { margin: 14px 0 0; padding-left: 18px; }
+
+    footer { padding: 0 0 42px; }
+
+    .footer-panel {
+      border-radius: var(--radius-lg);
+      padding: 30px 34px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .footer-copy { color: var(--faint); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(42px);
+      filter: blur(10px);
+      transition: opacity .9s ease, transform .9s cubic-bezier(.18,.82,.2,1), filter .9s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    .reveal-left { transform: translateX(-48px); }
+    .reveal-right { transform: translateX(48px); }
+    .reveal-left.visible, .reveal-right.visible { transform: translateX(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+      .reveal { opacity: 1; transform: none; filter: none; }
+      .char { opacity: 1; transform: none; animation: none; }
+    }
+
+    @media (max-width: 1060px) {
+      .hero-grid,
+      .team-layout,
+      .contact-layout,
+      .cards-grid,
+      .projects-grid,
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-panel { min-height: auto; }
+      .hero h1 { max-width: 14ch; }
+      .section-heading,
+      .highlight-banner,
+      .footer-panel { flex-direction: column; align-items: flex-start; }
+      .hero-meta { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 780px) {
+      .nav { align-items: flex-start; flex-wrap: wrap; }
+      .brand { min-width: 0; }
+      .brand-text strong { font-size: .82rem; }
+      .brand-text span { font-size: .7rem; }
+
+      .mobile-toggle { display: inline-flex; margin-left: auto; }
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 12px;
+      }
+      nav.open { display: flex; }
+
+      section { padding: 78px 0; }
+      .hero { padding-top: 38px; }
+      .hero-copy, .hero-panel, .team-intro, .team-card, .process-card, .contact-panel, .aside-card, .card { padding: 24px; }
+      .hero-visual { min-height: 390px; }
+      .floating-card { max-width: calc(100% - 32px); width: auto; }
+      .card-a { top: 18px; left: 18px; }
+      .card-b { right: 18px; top: 42%; }
+      .card-c { left: 18px; bottom: 18px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .process-card { flex-direction: column; }
+      .cursor-glow, .luxury-cursor, .luxury-cursor-dot { display: none; }
+    }
+
+    @media (hover: none), (pointer: coarse) {
+      .luxury-cursor, .luxury-cursor-dot { display: none; }
+    }
+  </style></head><body>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="luxury-cursor" aria-hidden="true"></div>
+  <div class="luxury-cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>  <header>
+    <div class="page-shell nav">
+      <a class="brand magnetic" href="#top" aria-label="NISARGA CONSTRUCTIONS home">
+        <div class="brand-mark" aria-hidden="true"></div>
+        <div class="brand-text">
+          <strong>NISARGA CONSTRUCTIONS</strong>
+          <span>Planning, Design, Structure & Execution</span>
+        </div>
+      </a><button class="mobile-toggle magnetic" type="button" aria-label="Open menu">Menu</button>
+
+  <nav aria-label="Main navigation">
+    <a class="magnetic" href="#services">Services</a>
+    <a class="magnetic" href="#projects">Work</a>
+    <a class="magnetic" href="#team">Team</a>
+    <a class="magnetic" href="#testimonials">Reviews</a>
+    <a class="magnetic" href="#process">Process</a>
+    <a class="cta-link magnetic" href="#contact">Start a Project</a>
+  </nav>
+</div>
+
+  </header>  <main id="top">
+    <section class="hero">
+      <div class="page-shell hero-grid">
+        <div class="hero-copy glass reveal reveal-left">
+          <svg class="svg-deco hero-deco-1" viewBox="0 0 240 240" fill="none" aria-hidden="true">
+            <circle cx="120" cy="120" r="86" stroke-width="1" />
+            <circle cx="120" cy="120" r="50" stroke-width="1" />
+            <path d="M120 18v204M18 120h204M48 48l144 144M192 48L48 192" stroke-width="1" />
+          </svg>
+          <svg class="svg-deco hero-deco-2" viewBox="0 0 180 180" fill="none" aria-hidden="true">
+            <rect x="32" y="32" width="116" height="116" rx="24" stroke-width="1" />
+            <path d="M58 124V76l32-24 32 24v48" stroke-width="1" />
+            <path d="M76 124V92h28v32" stroke-width="1" />
+          </svg><div class="eyebrow-line">
+        <div class="pill">Hubballi Region Project Support</div>
+      </div>
+
+      <h1 class="split-text" data-text="Built for Indian homes, sites, and real approvals.">
+        Built for Indian homes, sites, and <span class="gold-text">real approvals.</span>
+      </h1>
+
+      <p>
+        NISARGA CONSTRUCTIONS brings together drawings, structural clarity, vastu guidance,
+        execution planning, and interior coordination in one streamlined workflow. We help
+        clients move from concept to construction with practical local insight and modern
+        project thinking.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary magnetic" href="#contact">Book a Consultation</a>
+        <a class="button button-secondary magnetic" href="#services">Explore Services</a>
+      </div>
+
+      <div class="hero-meta" aria-label="Quick business highlights">
+        <div>
+          <strong>End-to-end</strong>
+          <span>Approvals, design, execution, and handover support</span>
+        </div>
+        <div>
+          <strong>Site-aware</strong>
+          <span>Built for local conditions, practical budgets, and timelines</span>
+        </div>
+        <div>
+          <strong>Client-first</strong>
+          <span>Clear drawings, disciplined supervision, and coordinated delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-panel glass reveal reveal-right">
+      <div class="panel-top">
+        <span>Single-point coordination</span>
+        <span>Residential · Commercial · Renovation</span>
+      </div>
+
+      <div class="hero-visual magnetic" aria-hidden="true">
+        <svg viewBox="0 0 700 760" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="goldLine" x1="0" x2="1" y1="0" y2="1">
+              <stop stop-color="#ffe3a0" stop-opacity=".95" />
+              <stop offset=".55" stop-color="#d6b46a" stop-opacity=".55" />
+              <stop offset="1" stop-color="#9b7332" stop-opacity=".2" />
+            </linearGradient>
+          </defs>
+          <path d="M80 616V268L350 72L620 268V616" stroke="url(#goldLine)" stroke-width="2" />
+          <path d="M160 616V312L350 176L540 312V616" stroke="rgba(255,255,255,.22)" stroke-width="1.4" />
+          <path d="M250 616V420H450V616" stroke="rgba(255,227,160,.56)" stroke-width="1.6" />
+          <path d="M212 352H292V432H212V352ZM408 352H488V432H408V352Z" stroke="rgba(255,255,255,.18)" stroke-width="1.4" />
+          <path d="M80 616H620" stroke="rgba(255,227,160,.48)" stroke-width="2" />
+          <path d="M40 690C160 642 244 720 350 674C456 628 544 664 660 614" stroke="rgba(31,157,134,.42)" stroke-width="2" />
+          <circle cx="350" cy="350" r="262" stroke="rgba(255,255,255,.07)" stroke-width="1" />
+          <circle cx="350" cy="350" r="190" stroke="rgba(255,255,255,.07)" stroke-width="1" />
+        </svg>
+
+        <div class="floating-card card-a">
+          <strong>Plan + Approvals</strong>
+          <span>Support for civic approval workflows and drawing packages.</span>
+        </div>
+        <div class="floating-card card-b">
+          <strong>Structure-led</strong>
+          <span>Design aligned with safety, usability, and execution quality.</span>
+        </div>
+        <div class="floating-card card-c">
+          <strong>Execution Control</strong>
+          <span>Site supervision, sequencing, and finish coordination.</span>
+        </div>
+      </div>
+
+      <div class="panel-footer">
+        <span>Fluid planning. Practical construction.</span>
+        <span>India-focused service positioning</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Architecture</span><span>Structural Drawings</span><span>Approvals Support</span><span>Vastu Consultancy</span><span>Execution</span><span>Interior Design</span>
+    <span>Architecture</span><span>Structural Drawings</span><span>Approvals Support</span><span>Vastu Consultancy</span><span>Execution</span><span>Interior Design</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <div>
+        <div class="pill">Core Services</div>
+        <h2>Everything needed to move a project forward with confidence.</h2>
+      </div>
+      <p>
+        The studio combines technical planning with on-ground execution support so clients
+        do not have to manage separate consultants for each stage of the project.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <article class="card reveal magnetic"><div class="card-number">01</div><h3>Approval Support</h3><p>Preparation support for municipal approval-related documentation and drawing coordination for projects in and around Hubballi.</p></article>
+      <article class="card reveal magnetic"><div class="card-number">02</div><h3>Architectural Drawings</h3><p>Concept planning, floor layouts, elevations, space logic, and presentation-ready architectural design packages.</p></article>
+      <article class="card reveal magnetic"><div class="card-number">03</div><h3>Structural Drawings</h3><p>Clear structural planning with execution-minded detailing to support safer and more buildable construction outcomes.</p></article>
+      <article class="card reveal magnetic"><div class="card-number">04</div><h3>Vastu Consultancy</h3><p>Balanced vastu guidance integrated with real-world planning, circulation, light, and site feasibility requirements.</p></article>
+      <article class="card reveal magnetic"><div class="card-number">05</div><h3>Execution</h3><p>On-site coordination, sequencing, quality monitoring, and build management from foundation stages to final finishes.</p></article>
+      <article class="card reveal magnetic"><div class="card-number">06</div><h3>Interior Design</h3><p>Functional interiors shaped around modern Indian lifestyles, storage efficiency, materials, and finish consistency.</p></article>
+    </div>
+
+    <div class="highlight-banner reveal">
+      <div>
+        <strong>Why clients choose integrated delivery</strong>
+        <p>One aligned team means fewer communication gaps between design intent, structural planning, approvals, and actual site execution.</p>
+      </div>
+      <a class="button button-primary magnetic" href="#contact">Discuss Your Requirement</a>
+    </div>
+  </div>
+</section>
+
+<section id="team" class="dark-band">
+  <div class="page-shell team-layout">
+    <div class="team-intro reveal reveal-left">
+      <div class="pill">About The Team</div>
+      <h2>Specialists who stay close to the work on paper and on site.</h2>
+      <p>
+        NISARGA CONSTRUCTIONS is positioned as a focused construction and design practice
+        where coordination matters as much as creativity. The team approach is hands-on,
+        practical, and suited to clients who want clarity from planning through execution.
+      </p>
+      <div class="team-note">Every project is approached with design intelligence, local context, site discipline, and client communication.</div>
+    </div>
+
+    <div class="team-stack">
+      <article class="team-card reveal magnetic"><strong>Execution Lead</strong><h3>Darshan DC</h3><p>Leads execution, site supervision, sequencing, and on-ground coordination to keep projects aligned with the approved design and construction intent.</p></article>
+      <article class="team-card reveal magnetic"><strong>Architectural Lead</strong><h3>Bharat K</h3><p>Handles architectural drawings, layout development, design articulation, and project planning documentation for client review and execution use.</p></article>
+      <article class="team-card reveal magnetic"><strong>Extended Team</strong><h3>Consultant Network</h3><p>Additional structural, interior, vendor, and project support functions are coordinated as needed to suit project type, scale, and delivery stage.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <div>
+        <div class="pill">Work Done</div>
+        <h2>Sample project showcase space ready for real site images later.</h2>
+      </div>
+      <p>
+        These placeholder project cards establish a premium layout now. Replace each block with actual completed project photos, names, and details later.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card reveal magnetic">
+        <div class="project-image" aria-hidden="true"><svg viewBox="0 0 560 390"><path d="M70 320V150L280 52L490 150V320" stroke="rgba(255,227,160,.62)" stroke-width="2" fill="none"/><path d="M134 320V182L280 114L426 182V320" stroke="rgba(255,255,255,.18)" stroke-width="1.4" fill="none"/><path d="M218 320V238H342V320" stroke="rgba(255,227,160,.36)" stroke-width="1.4" fill="none"/></svg></div>
+        <div class="project-copy"><strong>Sample Residence</strong><h3>Modern Duplex Home Planning and Execution</h3><p>A sample showcase card for a full-scope residential project including planning, structure, execution, and finish coordination.</p><div class="project-meta"><span>Architecture</span><span>Execution</span><span>Interiors</span></div></div>
+      </article>
+
+      <article class="project-card reveal magnetic">
+        <div class="project-image" aria-hidden="true"><svg viewBox="0 0 560 390"><path d="M106 322V90H454V322" stroke="rgba(255,227,160,.6)" stroke-width="2" fill="none"/><path d="M156 142H230V216H156V142ZM330 142H404V216H330V142" stroke="rgba(255,255,255,.2)" stroke-width="1.4" fill="none"/><path d="M238 322V240H322V322" stroke="rgba(255,227,160,.35)" stroke-width="1.4" fill="none"/></svg></div>
+        <div class="project-copy"><strong>Sample Commercial</strong><h3>Compact Commercial Space with Approval Support</h3><p>Use this section later for office, retail, or commercial work where drawings, approval support, and build coordination were handled together.</p><div class="project-meta"><span>Approvals</span><span>Planning</span><span>Structure</span></div></div>
+      </article>
+
+      <article class="project-card reveal magnetic">
+        <div class="project-image" aria-hidden="true"><svg viewBox="0 0 560 390"><path d="M120 310V104H440V310" stroke="rgba(255,227,160,.58)" stroke-width="2" fill="none"/><path d="M166 150H394V230H166V150Z" stroke="rgba(255,255,255,.18)" stroke-width="1.4" fill="none"/><path d="M206 310V254H354V310" stroke="rgba(255,227,160,.35)" stroke-width="1.4" fill="none"/></svg></div>
+        <div class="project-copy"><strong>Sample Interior</strong><h3>Interior Upgrade for a Family Home</h3><p>A placeholder presentation card for modular storage, aesthetic refinement, and practical interior design suited to modern Indian living.</p><div class="project-meta"><span>Interiors</span><span>Renovation</span><span>Vastu</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <div>
+        <div class="pill">Public Reviews</div>
+        <h2>Trusted locally with strong public ratings.</h2>
+      </div>
+      <p>
+        The live Google Maps review text should be added manually or through an approved API. To avoid fake testimonials, this section uses public listing details and links visitors to Google reviews.
+      </p>
+    </div>
+
+    <div class="testimonial-grid">
+      <article class="testimonial-card reveal magnetic"><div class="testimonial-copy"><span class="testimonial-role">Public Rating</span><div class="rating-stars" aria-label="4.9 star rating">★★★★★</div><h3>4.9 rating from public customer ratings</h3><p>Nisarga Constructions is publicly listed with a strong 4.9 rating based on 38 customer ratings.</p><div class="testimonial-author"><strong>Nisarga Constructions</strong><span>Architects & Building Structural Designing Services</span></div></div></article>
+      <article class="testimonial-card reveal magnetic"><div class="testimonial-copy"><span class="testimonial-role">Location Verified</span><h3>Navanagar, Hubballi office location</h3><p>Listed at 06, Munoli Arcade, near BRTS bus stop, Navanagar, Hubballi, Karnataka 580023.</p><div class="testimonial-author"><strong>Office Address</strong><span>Hubballi, Karnataka</span></div></div></article>
+      <article class="testimonial-card reveal magnetic"><div class="testimonial-copy"><span class="testimonial-role">Google Reviews</span><h3>View live reviews on Google Maps</h3><p>For latest customer feedback, photos, directions, and review updates, visitors can open the official Google Maps listing directly.</p><a class="review-link magnetic" href="https://maps.app.goo.gl/Rjk8uWPBTPLv8CC9A" target="_blank" rel="noopener">View Google reviews →</a><div class="testimonial-author"><strong>Live Review Source</strong><span>Google Maps listing</span></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="dark-band">
+  <div class="page-shell">
+    <div class="section-heading reveal">
+      <div><div class="pill">How It Works</div><h2>A clear workflow from first discussion to final execution.</h2></div>
+      <p>The process is designed for Indian clients who want straightforward communication, disciplined planning, and fewer surprises once site work begins.</p>
+    </div>
+
+    <div class="process-stack">
+      <article class="process-card reveal magnetic"><div class="process-index">1</div><div><h3>Consultation & Site Understanding</h3><p>Project goals, site conditions, budget direction, and preferred requirements are reviewed before planning begins.</p></div></article>
+      <article class="process-card reveal magnetic"><div class="process-index">2</div><div><h3>Planning, Drawings & Approvals Path</h3><p>Architectural and structural inputs are coordinated while identifying the relevant civic approval route and document flow.</p></div></article>
+      <article class="process-card reveal magnetic"><div class="process-index">3</div><div><h3>Execution Strategy</h3><p>Material direction, on-site sequencing, workforce coordination, and finish decisions are aligned before full-scale execution begins.</p></div></article>
+      <article class="process-card reveal magnetic"><div class="process-index">4</div><div><h3>Supervision & Completion</h3><p>The team oversees construction quality, tracks progress, and supports the final delivery stage with a finish-focused approach.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="page-shell contact-layout">
+    <div class="contact-panel reveal reveal-left">
+      <div class="pill">Start Your Project</div>
+      <h2>Planning a home, commercial space, or renovation in Karnataka?</h2>
+      <p>Reach out to NISARGA CONSTRUCTIONS for an initial consultation covering design scope, site execution needs, and the right next steps for your project.</p>
+
+      <div class="contact-grid">
+        <div class="contact-item"><strong>Service Area</strong><span>06, Munoli Arcade, near BRTS bus stop, Navanagar, Hubballi, Karnataka 580023</span></div>
+        <div class="contact-item"><strong>Project Types</strong><span>Residential homes, interiors, small commercial builds, and renovations</span></div>
+        <div class="contact-item"><strong>Email</strong><a href="mailto:hello@nisargaconstructions.in">hello@nisargaconstructions.in</a></div>
+        <div class="contact-item"><strong>Phone</strong><a href="tel:+917019918481">+91 70199 18481</a></div>
+      </div>
+    </div>
+
+    <div class="contact-aside">
+      <aside class="aside-card reveal magnetic"><h3>Project principles</h3><ul><li>Design that respects Indian family living patterns and practical use.</li><li>Coordination that reduces delay between drawings and execution.</li><li>Balanced decision-making across vastu, structure, aesthetics, and budget.</li></ul></aside>
+      <aside class="aside-card reveal magnetic"><h3>Client promise</h3><p>Clear communication, disciplined supervision, and a construction-first mindset that turns drawings into spaces that work in real life.</p><a class="button button-primary magnetic" href="mailto:hello@nisargaconstructions.in" style="margin-top:18px;">Send Enquiry</a></aside>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer>
+    <div class="page-shell footer-panel reveal">
+      <div class="footer-brand"><strong>NISARGA CONSTRUCTIONS</strong><span>Designing with intent. Building with discipline.</span></div>
+      <div class="footer-copy">© <span id="year"></span> NISARGA CONSTRUCTIONS. All rights reserved.</div>
+    </div>
+  </footer>  <script>
+    const header = document.querySelector("header");
+    const progress = document.querySelector(".scroll-progress");
+    const glow = document.querySelector(".cursor-glow");
+    const nav = document.querySelector("nav");
+    const toggle = document.querySelector(".mobile-toggle");
+    const cursor = document.querySelector(".luxury-cursor");
+    const cursorDot = document.querySelector(".luxury-cursor-dot");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    window.addEventListener("scroll", () => {
+      header.classList.toggle("scrolled", window.scrollY > 40);
+      const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+      const percent = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+      progress.style.width = percent + "%";
+    }, { passive: true });
+
+    toggle.addEventListener("click", () => nav.classList.toggle("open"));
+    document.querySelectorAll("nav a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("open")));
+
+    function splitText() {
+      document.querySelectorAll(".split-text").forEach((el) => {
+        const nodes = Array.from(el.childNodes);
+        let index = 0;
+        el.innerHTML = "";
+
+        nodes.forEach((node) => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            node.textContent.split("").forEach((ch) => {
+              const span = document.createElement("span");
+              span.className = ch === " " ? "word-space" : "char";
+              span.style.setProperty("--i", index++);
+              span.textContent = ch === " " ? " " : ch;
+              el.appendChild(span);
+            });
+          } else if (node.nodeType === Node.ELEMENT_NODE) {
+            const wrapperClass = node.className;
+            node.textContent.split("").forEach((ch) => {
+              const span = document.createElement("span");
+              span.className = (ch === " " ? "word-space" : "char") + " " + wrapperClass;
+              span.style.setProperty("--i", index++);
+              span.textContent = ch === " " ? " " : ch;
+              el.appendChild(span);
+            });
+          }
+        });
+      });
+    }
+
+    if (!prefersReduced) splitText();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -40px 0px" });
+
+    document.querySelectorAll(".reveal").forEach((element, index) => {
+      element.style.transitionDelay = Math.min(index * 52, 360) + "ms";
+      observer.observe(element);
+    });
+
+    if (finePointer && !prefersReduced) {
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let cursorX = mouseX;
+      let cursorY = mouseY;
+
+      window.addEventListener("mousemove", (event) => {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+        cursor.style.opacity = "1";
+        cursorDot.style.opacity = "1";
+        glow.style.left = mouseX + "px";
+        glow.style.top = mouseY + "px";
+        cursorDot.style.left = mouseX + "px";
+        cursorDot.style.top = mouseY + "px";
+      }, { passive: true });
+
+      function animateCursor() {
+        cursorX += (mouseX - cursorX) * .16;
+        cursorY += (mouseY - cursorY) * .16;
+        cursor.style.left = cursorX + "px";
+        cursor.style.top = cursorY + "px";
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      window.addEventListener("mousedown", () => cursor.classList.add("active"));
+      window.addEventListener("mouseup", () => cursor.classList.remove("active"));
+      window.addEventListener("mouseleave", () => { cursor.style.opacity = "0"; cursorDot.style.opacity = "0"; });
+
+      document.querySelectorAll("a, button, .magnetic").forEach((item) => {
+        item.addEventListener("mouseenter", () => cursor.classList.add("hovering"));
+        item.addEventListener("mouseleave", () => {
+          cursor.classList.remove("hovering");
+          item.style.transform = "translate3d(0,0,0)";
+        });
+
+        item.addEventListener("mousemove", (event) => {
+          const rect = item.getBoundingClientRect();
+          const x = event.clientX - rect.left - rect.width / 2;
+          const y = event.clientY - rect.top - rect.height / 2;
+          item.style.transform = `translate3d(${x * .08}px, ${y * .08}px, 0)`;
+        });
+      });
+
+      document.querySelectorAll(".card, .project-card, .testimonial-card, .team-card, .process-card, .contact-panel, .aside-card").forEach((card) => {
+        card.addEventListener("mousemove", (event) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((event.clientX - rect.left) / rect.width) * 100;
+          const y = ((event.clientY - rect.top) / rect.height) * 100;
+          card.style.setProperty("--mx", x + "%");
+          card.style.setProperty("--my", y + "%");
+        });
+      });
+
+      document.querySelectorAll(".hero-visual").forEach((visual) => {
+        visual.addEventListener("mousemove", (event) => {
+          const rect = visual.getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const rotateY = ((x / rect.width) - .5) * 9;
+          const rotateX = ((y / rect.height) - .5) * -9;
+          visual.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+        visual.addEventListener("mouseleave", () => visual.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg)");
+      });
+    }
+  </script></body>
+</html>    }
 
     .page-shell {
       width: min(calc(100% - 32px), var(--max));
